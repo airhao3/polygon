@@ -48,6 +48,15 @@ document.addEventListener('keydown', function(e) {
 
 function clipboard(selector) {
     var copyText = document.querySelector(selector).innerText;
+    if(selector == "#clipboard") {
+        copyText = document.querySelector("#json").innerText;
+    }
+    navigator.clipboard.writeText(copyText);
+}
+
+
+function clipboard(selector) {
+    var copyText = document.querySelector(selector).innerText;
     if(selector == "#clipboardJSON") {
         copyText = document.querySelector("#json").innerText;
     }
