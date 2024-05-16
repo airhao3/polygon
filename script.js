@@ -47,10 +47,13 @@ document.addEventListener('keydown', function(e) {
 });
 
 function clipboard(selector) {
-    //var copyText = document.querySelector(selector).innerText;
-    var copyText = document.querySelector(selector === "#clipboard" ? "#json" : selector).innerText;
-    if(selector == "#clipboardJSON") {
-        copyText = document.querySelector("#json").innerText;
+    var copyText;
+    if (selector === "#clipboard") {
+        copyText = document.querySelector("#python").innerText; // Line 4: Fix selector for clipboard button
+    } else if (selector === "#clipboardJSON") {
+        copyText = document.querySelector("#json").innerText; // Line 6: Correct handling for clipboardJSON
+    } else {
+        copyText = document.querySelector(selector).innerText;
     }
     navigator.clipboard.writeText(copyText);
 }
