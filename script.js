@@ -37,12 +37,12 @@ document.addEventListener('keydown', function(e) {
     if (e.key == 'l') {
         drawMode = "line";
         canvas.style.cursor = 'crosshair';
-        modeMessage.innerHTML = "Draw Mode: Line (press <kbd>p</kbd> to change to polygon drawing)";
+        modeMessage.innerHTML = "绘制模式: 线段 (按 <kbd>p</kbd> 键切换到多边形绘制)";
     }
     if (e.key == 'p') {
         drawMode = "polygon";
         canvas.style.cursor = 'crosshair';
-        modeMessage.innerHTML = 'Draw Mode: Polygon (press <kbd>l</kbd> to change to line drawing)';
+        modeMessage.innerHTML = '绘制模式: 多边形 (按 <kbd>l</kbd> 键切换到线段绘制)';
     }
 });
 
